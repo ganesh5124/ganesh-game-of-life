@@ -19,11 +19,9 @@
         <thucydides.version>1.8.4</thucydides.version>
         <jelastic.context>gameoflife</jelastic.context>
         <jelastic.environment>wakaleo</jelastic.environment>
+		<docker.image.prefix>kammana</docker.image.prefix>
+		<sonar.host.url>http://43.205.116.21:9000/</sonar.host.url>
     </properties>
-    <properties>
-        <sonar.host.url>http://43.205.116.21:9000/</sonar.host.url>
-    </properties>
-
     <scm>
         <connection>scm:git:git@github.com:${github.account}/game-of-life.git</connection>
         <developerConnection>scm:git:git@github.com:${github.account}/game-of-life.git</developerConnection>
