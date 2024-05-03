@@ -20,7 +20,7 @@
         <jelastic.context>gameoflife</jelastic.context>
         <jelastic.environment>wakaleo</jelastic.environment>
 		<docker.image.prefix>kammana</docker.image.prefix>
-		<sonar.host.url>http://43.205.116.21:9000/</sonar.host.url>
+		<sonar.host.url>http://http://65.2.4.81:9000/</sonar.host.url>
     </properties>
     <scm>
         <connection>scm:git:git@github.com:${github.account}/game-of-life.git</connection>
@@ -77,6 +77,18 @@
                 </executions>
             </plugin>
             <!-- CODE COVERAGE -->
+
+		<distributionManagement>
+		 <snapshotRepository>
+		    <id>nexusRepo</id>
+		    <url>http://65.2.4.81:8081/repository/dummy-app-snaps/</url>
+		 </snapshotRepository>
+		
+		<repository>
+		    <id>nexusRepo</id>
+		    <url>http://65.2.4.81:8081/repository/dummy-app-release/</url>
+		</repository>
+  	</distributionManagement>
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
